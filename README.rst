@@ -8,6 +8,11 @@ Plugs Post
 .. image:: https://travis-ci.org/yo-solo/plugs-post.png?branch=master
     :target: https://travis-ci.org/yo-solo/plugs-post
 
+.. image:: https://codecov.io/github/yo-solo/plugs-post/coverage.svg?branch=master
+        :target: https://codecov.io/github/yo-solo/plugs-post?branch=master
+
+
+
 Quick start
 -----------
 
