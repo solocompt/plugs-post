@@ -11,7 +11,22 @@ Plugs Post
 Quick start
 -----------
 
-Soon...
+1. Install using Pip
+
+$ pip install plugs_post
+
+2. Add it to INSTALLED_APPS
+
+INSTALLED_APPS = [
+    # other apps
+    'plugs_post'
+]
+
+3. Run migrate
+
+$ python manage.py migrate plugs_post
+
+4. Register the Viewsets
 
 ...
 
