@@ -1,64 +1,25 @@
-# -*- coding: utf-8 -*-
-from django.views.generic import (
-    CreateView,
-    DeleteView,
-    DetailView,
-    UpdateView,
-    ListView
-)
+from rest_framework import viewsets
+from rest_framework import permissions
 
-from .models import (
-	Post,
-	PostSection,
-)
+from plugs_post import models
+from plugs_post import serializers
 
 
-class PostCreateView(CreateView):
-
-    model = Post
-
-
-class PostDeleteView(DeleteView):
-
-    model = Post
-
-
-class PostDetailView(DetailView):
-
-    model = Post
+class PostViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Post Viewset
+    """
+    queryset = models.Post.objects.all()
+    serializer_class = serializers.PostSerializer
+    permission_classes = [permissions.AllowAny]
+    lookup_field = 'slug'
 
 
-class PostUpdateView(UpdateView):
-
-    model = Post
-
-
-class PostListView(ListView):
-
-    model = Post
-
-
-class PostSectionCreateView(CreateView):
-
-    model = PostSection
-
-
-class PostSectionDeleteView(DeleteView):
-
-    model = PostSection
-
-
-class PostSectionDetailView(DetailView):
-
-    model = PostSection
-
-
-class PostSectionUpdateView(UpdateView):
-
-    model = PostSection
-
-
-class PostSectionListView(ListView):
-
-    model = PostSection
-
+class PostSectionViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Post Section Viewset
+    """
+    queryset = models.PostSection.objects.all()
+    serializer_class = serializers.PostSectionSerializer
+    permission_classes = [permissions.AllowAny]
+    lookup_field = 'slug'
