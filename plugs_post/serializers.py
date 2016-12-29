@@ -11,7 +11,7 @@ class PostSerializer(serializers.ModelSerializer):
         Metaclass definition
         """
         model = Post
-        fields = ('id', 'name', 'text', 'section', 'slug', 'is_listed', 'created', 'updated')
+        fields = ('id', 'name', 'text', 'section', 'slug', 'created', 'updated')
         read_only_fields = ('slug', )
 
 class PostSectionSerializer(serializers.ModelSerializer):

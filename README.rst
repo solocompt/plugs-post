@@ -12,3 +12,20 @@ Quick start
 -----------
 
 Soon...
+
+...
+
+from plugs_post.views import PostViewSet, PostSectionViewSet
+
+ROUTER = routers.DefaultRouter()
+
+...
+
+ROUTER.register(r'posts', PostViewSet)
+ROUTER.register(r'post_sections', PostSectionViewSet)
+
+...
+
+urlpatterns = [
+    url(r'^', include(ROUTER.urls))
+]
