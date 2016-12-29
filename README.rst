@@ -13,34 +13,36 @@ Quick start
 
 1. Install using Pip
 
-$ pip install plugs_post
+   .. code-block:: bash
+
+                   $ pip install plugs_post
 
 2. Add it to INSTALLED_APPS
 
-INSTALLED_APPS = [
-    # other apps
-    'plugs_post'
-]
+   .. code-block:: python
+
+                   INSTALLED_APPS = (
+                   # other apps
+                   'plugs_post'
+                   )
 
 3. Run migrate
 
-$ python manage.py migrate plugs_post
+   .. code-block:: bash
+
+                   $ python manage.py migrate plugs_post
 
 4. Register the Viewsets
 
-...
+   .. code-block:: python
 
-from plugs_post.views import PostViewSet, PostSectionViewSet
+                   from plugs_post.views import PostViewSet, PostSectionViewSet
 
-ROUTER = routers.DefaultRouter()
+                   ROUTER = routers.DefaultRouter()
 
-...
+                   ROUTER.register(r'posts', PostViewSet)
+                   ROUTER.register(r'post_sections', PostSectionViewSet)
 
-ROUTER.register(r'posts', PostViewSet)
-ROUTER.register(r'post_sections', PostSectionViewSet)
-
-...
-
-urlpatterns = [
-    url(r'^', include(ROUTER.urls))
-]
+                   urlpatterns = [
+                   url(r'^', include(ROUTER.urls))
+                   ]
