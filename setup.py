@@ -55,7 +55,10 @@ setup(
         'plugs_post',
     ],
     include_package_data=True,
-    install_requires=["django-model-utils>=2.0",],
+    install_requires=[
+        "django-model-utils>=2.0",
+        "plugs_core>=0.1.6"
+    ],
     license="MIT",
     zip_safe=False,
     keywords='plugs-post',
