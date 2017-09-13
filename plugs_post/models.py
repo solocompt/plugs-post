@@ -29,6 +29,7 @@ class Post(mixins.Timestampable, mixins.Slugable, models.Model):
         Providing verbose names is recommended if
         we want to use i18n in admin site
         """
+        ordering = ('pk', )
         verbose_name = _("post")
         verbose_name_plural = _("posts")
 
@@ -59,5 +60,6 @@ class PostSection(mixins.Timestampable, mixins.Slugable, models.Model):
         Providing verbose names is recommended if
         we want to use i18n in admin site
         """
+        ordering = ('pk', )
         verbose_name = _("post section")
         verbose_name_plural = _("post sections")

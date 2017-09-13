@@ -46,33 +46,27 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='plugs-post',
     version=version,
-    description="""Your project description goes here""",
+    description="""Post APP""",
     long_description=readme + '\n\n' + history,
-    author='Ricardo Lobo',
-    author_email='ricardolobo@soloweb.pt',
-    url='https://github.com/ricardolobo/plugs-post',
+    author='Solo',
+    author_email='geral@solo.com.pt',
+    url='https://github.com/solocompt/plugs-post',
     packages=[
         'plugs_post',
     ],
     include_package_data=True,
     install_requires=[
-        "django-model-utils>=2.0",
-        "plugs_core>=0.1.6"
+        "plugs_core>=0.1.6,<0.3.0"
     ],
     license="MIT",
     zip_safe=False,
     keywords='plugs-post',
     classifiers=[
         'Development Status :: 3 - Alpha',
-        'Framework :: Django',
-        'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.11',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3'
     ],
 )
