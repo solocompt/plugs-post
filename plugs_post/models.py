@@ -10,8 +10,8 @@ class Post(mixins.Timestampable, mixins.Slugable, models.Model):
     """
     name = models.CharField(max_length=100)
     text = models.TextField()
-    section = models.ForeignKey('PostSection', null=True, blank=True)
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+    section = models.ForeignKey('PostSection', null=True, blank=True, on_delete=models.PROTECT)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.PROTECT)
 
     def __str__(self):
         """
